@@ -1,4 +1,5 @@
-/* Entry Point
+/** 
+ *Entry Point
  * Description: A C program that prints with the put function
  * Return 0
  *
