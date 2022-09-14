@@ -1,4 +1,4 @@
-#include"main.h"
+#include<main.h>
 
 /*
  * Description: prints _putchar using putchar prototype
