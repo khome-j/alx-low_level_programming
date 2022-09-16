@@ -24,4 +24,3 @@ void print_number(int n)
 	/*print the last digit*/
 	_putchar((num % 10) + 48);
 }
-Footer
