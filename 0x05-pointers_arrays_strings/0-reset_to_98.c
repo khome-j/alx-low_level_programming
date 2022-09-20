@@ -3,7 +3,7 @@
 
 /**
  * reset to 98: a function that takes a pointer to an int as parameter and
-updates it points to 98.
+ * updates it points to 98.
  *
  * Return: Always 0.
  */
