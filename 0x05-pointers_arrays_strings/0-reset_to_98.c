@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 
 /**
  * reset to 98: a function that takes a pointer to an int as parameter and
