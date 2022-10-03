@@ -12,6 +12,6 @@ int main(int __attribute__((unused)) argc, char *argv[])
 {
     int count = 0;
 
-    printf("my name is %s\n", argv[count]);
+    printf("%s\n", argv[count]);
     return (0);
 }
