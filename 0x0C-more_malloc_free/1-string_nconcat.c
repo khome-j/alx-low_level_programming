@@ -3,22 +3,6 @@
 #include <stdlib.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char *concat;
-
-	concat = string_nconcat("Best ", "Schoolbooy!!!", 6);
-	printf("%s\n", concat);
-	free(concat);
-	return (0);
-}
-
-
-/**
  * string_nconcat - a program that concatenates two strings
  * @s1: a character data type as input
  * @s2: a character data type as input
