@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
- * malloc check - a function that allocates memory.
- * @b - an unsigned integer
+ * malloc_check - a function that allocates memory.
+ * @b: an unsigned integer
  *
  * Return: a pointer to the allocated memory or
  * return a status value of 98 if malloc allocation fails.
@@ -19,4 +19,3 @@ void *malloc_checked(unsigned int b)
 		exit(98);
 	return (ptr);
 }
-
