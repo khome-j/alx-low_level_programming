@@ -3,6 +3,22 @@
 #include <stdlib.h>
 
 /**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char *concat;
+
+	concat = string_nconcat("Best ", "Schoolbooy!!!", 6);
+	printf("%s\n", concat);
+	free(concat);
+	return (0);
+}
+
+
+/**
  * string_nconcat - a program that concatenates two strings
  * @s1: a character data type as input
  * @s2: a character data type as input
@@ -26,19 +42,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len1++;
 	for (i = 0; s2[i] != '\0'; i++)
 		len2++;
-	ptr = malloc((len1 + len2 + 1) * sizeof(*ptr));
+	if (n >= len2)
+		n = len2;
+	ptr = malloc((len1 + n + 1) * sizeof(*ptr));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 		ptr[i] = s1[i];
-	for (j = 0; s2[j] != '\0'; j++)
+	for (j = 0; j < n; j++)
 	{
-		if (n <= (len2 + 1))
-		{
-			ptr[i] = s2[j];
-			i++;
-			n++;
-		}
+		ptr[i] = s2[j];
+		i++;
+
 	}
 	ptr[i] = '\0';
 	return (ptr);
