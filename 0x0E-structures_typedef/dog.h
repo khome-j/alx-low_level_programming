@@ -1,5 +1,5 @@
-#ifndef FILE_NAME
-#define FILE_NAME
+#ifndef DOG_H
+#define DOG_H
 
 #include <stdio.h>
 #include <stdlib.h>
