@@ -1,7 +1,16 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_numbers(", ", 4, 98, -1024);
+    return (0);
+}
 /**
  * print_numbers - a function that prints numbers.
  * @separator: a char pointer that separates the numbers.
