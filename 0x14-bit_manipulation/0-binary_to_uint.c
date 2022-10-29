@@ -62,7 +62,7 @@ int _strlen(const char *b)
  */
 int _atoi(char b)
 {
-	int i = 0, result = 0;
+	int result = 0;
 
 	result = result * 10 + (b - '0');
 	return (result);
