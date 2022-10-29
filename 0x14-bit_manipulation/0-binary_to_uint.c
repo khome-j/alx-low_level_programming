@@ -1,4 +1,8 @@
 #include "main.h"
+
+int _pow(int a, int b);
+int _strlen(const char *b);
+int _atoi(char b);
 /**
  * binary_to_uint - a function that convertss a binary number to an
  * unsigned int
@@ -68,6 +72,13 @@ int _atoi(char b)
 	return (result);
 }
 
+/**
+ * _pow - a function that returns the exponential value of a number
+ * @a: an integer
+ * @b: an integer
+ *
+ * Return: the exponential value
+ */
 int _pow(int a, int b)
 {
 	int i, result;
