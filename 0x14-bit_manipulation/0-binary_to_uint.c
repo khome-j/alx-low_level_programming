@@ -16,6 +16,9 @@ unsigned int binary_to_uint(const char *b)
 	char *p;
 	unsigned int k = 0;
 
+
+	if (b == NULL)
+		return (0);
 	p = malloc(sizeof(char *));
 	if (p == NULL)
 		return (1);
@@ -23,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 	p = strdup(b);
 	len = _strlen(p) - 1;
 
-	while (p && p[j])
+	while (p[j])
 	{
 		if (p[j] >= '0' && p[j] <= '9')
 		{
