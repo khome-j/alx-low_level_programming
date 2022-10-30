@@ -23,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	p = strdup(b);
 	len = _strlen(p) - 1;
 
-	while (p[j])
+	while (p && p[j])
 	{
 		if (p[j] >= '0' && p[j] <= '9')
 		{
