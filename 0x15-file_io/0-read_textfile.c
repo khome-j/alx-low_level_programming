@@ -1,7 +1,8 @@
 #include "main.h"
 
-/** read_textfile - a function that reads a text file and prints it to the
- *posix standard output
+/**
+ * read_textfile - a function that reads a text file and prints it to the
+ * posix standard output
  * @filename: the name of the file
  * @letters: number of letters it should read and print
  *
