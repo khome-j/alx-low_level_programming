@@ -9,7 +9,7 @@
  **/
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i;
+	int fd, len;
 	ssize_t write_file, bytes_read;
 
 
@@ -17,20 +17,19 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 00600);
-	printf("the value of fd is %d\n", fd);
 	if (fd == -1)
 		return (-1);
 
 	i = 0;
 
-	while (text_content[i])
+	while (text_content[len])
 	{
-		i++;
+		len++;
 	}
 	if (text_content == NULL)
 		return (1);
 
-	bytes_read = i;
+	bytes_read = len;
 	write_file = write(fd, text_content, bytes_read);
 	if (write_file == -1)
 		return (-1);
