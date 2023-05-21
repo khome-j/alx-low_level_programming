@@ -3,7 +3,8 @@
 /**
  * main - Entry Point
  *
- * Description: This function prints the size of various data types.
+ * Description: This function prints the size of various data types in 32
+ * and 64 bit operating system.
  *
  * Return: Always 0 (success)
  */
