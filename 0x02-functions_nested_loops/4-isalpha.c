@@ -5,7 +5,7 @@
  * @c: an unsigned integer
  *
  * Return: 1 if a letter(lower or uppercase)
- * Return: 0 if otherwise
+ * 0 if otherwise
  */
 
 int _isalpha(int c)
