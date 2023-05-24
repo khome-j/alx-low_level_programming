@@ -12,7 +12,6 @@ int _isalpha(int c)
 {
 	int lower, upper;
 
-	lower = 65;
 	upper = 97;
 
 	for (lower = 65; lower <= 90 && upper <= 122; lower++)
