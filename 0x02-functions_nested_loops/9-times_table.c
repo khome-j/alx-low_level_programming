@@ -5,26 +5,44 @@
  *
  * Return: nothing (on success)
  */
-
 void times_table(void)
 {
-	int count_num, count_mult, count_prod;
+	int n, m, prod, a, b;
 
-	for (count_num = 0; count_num <= 9; count_num++)
-	{
-		_putchar(48);
-		for (count_mult = 1; count_mult <= 9; count_mult++)
-		{
-			_putchar(',');
-			/*_putchar(' ');*/
-			count_prod = count_num * count_mult;
+	n = 0;
+	while (n < 10)
+	{m = 0;
+		while (m < 10)
+		{prod = n * m;
+			a = prod / 10;
+			b = prod % 10;
 
-			if (count_prod <= 9)
-				_putchar(' ');
+			if (m == 0)
+			{_putchar(prod + '0');
+			}
 			else
-				_putchar((count_prod / 10) + 48);
-			_putchar((count_prod % 10) + 48);
+			{
+			if (a == 0)
+			{
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(b + '0');
+			}
+			else
+			{_putchar(' ');
+				_putchar(a + '0');
+				_putchar(b + '0');
+
+			}
+			}
+			if (m == 9)
+			{_putchar('\n');
+			}
+			else
+			{_putchar(',');
+			}
+			m++;
 		}
-		_putchar('\n');
+		n++;
 	}
 }
