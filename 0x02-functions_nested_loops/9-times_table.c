@@ -12,25 +12,18 @@ void times_table(void)
 
 	for (count_num = 0; count_num <= 9; count_num++)
 	{
-		for (count_mult = 0; count_mult <= 9; count_mult++)
+		_putchar(48);
+		for (count_mult = 1; count_mult <= 9; count_mult++)
 		{
+			_putchar(',');
+			/*_putchar(' ');*/
 			count_prod = count_num * count_mult;
-			if (count_mult == 0)
-				_putchar(count_mult + '0');
-			if (count_prod <= 9 && count_num != 0)
-			{
-				_putchar(',');
+
+			if (count_prod <= 9)
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(count_prod + '0');
-			}
-			else if (count_prod > 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((count_prod / 10) + '0'); /*get the first number*/
-				_putchar((count_prod % 10) + '0'); /* get the last number*/
-			}
+			else
+				_putchar((count_prod / 10) + 48);
+			_putchar((count_prod % 10) + 48);
 		}
 		_putchar('\n');
 	}
