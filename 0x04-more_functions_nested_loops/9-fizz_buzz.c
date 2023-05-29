@@ -20,23 +20,20 @@ int main(void)
 		if ((digit % 3 == 0) && (digit % 5 == 0))
 		{
 			printf("FizzBuzz");
-			printf(" ");
 		}
-		else if (digit % 5 == 0)
+		else if (digit % 5 == 0 && digit % 3 != 0)
+			printf("Buzz");
+		else if (digit % 3 == 0 && digit % 5 != 0)
 		{
 			printf("Buzz");
-			printf(" ");
-		}
-		else if (digit % 3 == 0)
-		{
-			printf("Buzz");
-			printf(" ");
 		}
 		else
 		{
 			printf("%d", digit);
 			printf(" ");
 		}
+		if (digit >= 1 && digit < 100)
+			printf(" ");
 	}
 	printf("\n");
 
