@@ -29,7 +29,7 @@ int main(void)
 		}
 		else if (digit % 3 == 0)
 		{
-			printf("FizzBuzz");
+			printf("Buzz");
 			printf(" ");
 		}
 		else
