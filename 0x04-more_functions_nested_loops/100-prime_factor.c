@@ -3,19 +3,12 @@
 /**
  * main - Entry point
  *
- * Description: a program that finds and prints the largest prime factor of the
- * number 612852475143
+ * Description: a program that finds and prints the largest prime factor
+ * of the number 612852475143
  *
  * Return: 0 (on success)
  */
 
-#include <stdio.h>
-
-/**
- * main - Print prime factors
- *
- * Return: Always 0 (Success)
- */
 int main(void)
 {
 	static int d;
