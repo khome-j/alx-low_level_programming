@@ -12,9 +12,9 @@ void print_square(int size)
 
 	if (size > 0)
 	{
-		for (outer_loop = 0; outer_loop < size; outer_loop++)
+		for (outer_loop = 1; outer_loop <= size; outer_loop++)
 		{
-			for (inner_loop = 0; inner_loop < size; inner_loop++)
+			for (inner_loop = 1; inner_loop <= size; inner_loop++)
 			{
 				_putchar('#');
 			}
