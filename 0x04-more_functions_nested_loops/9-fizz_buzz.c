@@ -33,8 +33,7 @@ int main(void)
 			printf(" ");
 		}
 		if (digit >= 1 && digit < 100)
-			printf(" ");
-	}
+			printf(" "); }
 	printf("\n");
 
 	return (0);
