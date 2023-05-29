@@ -17,9 +17,9 @@ int main(void)
 
 	for (digit = 1; digit <= 100; digit++)
 	{
-		if (digit % 3 == 0)
+		if ((digit % 3 == 0) && (digit % 5 == 0))
 		{
-			printf("Fizz");
+			printf("FizzBuzz");
 			printf(" ");
 		}
 		else if (digit % 5 == 0)
@@ -27,7 +27,7 @@ int main(void)
 			printf("Buzz");
 			printf(" ");
 		}
-		else if ((digit % 3 == 0) && (digit % 5 == 0))
+		else if (digit % 3 == 0)
 		{
 			printf("FizzBuzz");
 			printf(" ");
