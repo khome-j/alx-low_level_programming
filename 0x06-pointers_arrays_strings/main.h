@@ -5,6 +5,7 @@
 
 char *_strcat(char *, char *);
 char *_strncat(char *, char *, int);
+char _*strncpy(char *, char *, int);
 
 
 
