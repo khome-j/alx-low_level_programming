@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * _strncpy - a function that copies a string
@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int len;
 
 	len = 0;
-	while(*(src + len) != '\0' && len1 < n)
+	while(*(src + len) != '\0' && len < n)
 	{
 		dest[len] = src[len];
 		len++;
