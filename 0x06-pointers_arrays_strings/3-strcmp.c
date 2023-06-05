@@ -8,29 +8,26 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	char *str1, *str2;
-	int i = 0;
-	int cont = 1;
+	int count, i = 0;
 
-	str1 = s1;
-	str2 = s2;
-	while (cont == 1)
+	count = 1;
+
+	while (count == 1)
 	{
-		if (*(str1 + i) != '\0' && *(str2 + i) != '\0')
+		if (*(s1 + i) != '\0' && *(s2 + i) != '\0')
 		{
-			if (*(str1 + i) == *(str2 + i))
+			if (*(s1 + i) == *(s2 + i))
 			{
 				i++;
+				count = 1;
 			}
 			else
-			{
-				cont = 0;
-			}
+				count = 0;
 		}
 		else
-		{
-			cont = 0;
-		}
+			count = 0;
 	}
-	return (*(str1 + i) - *(str2 + i));
+
+	return (*(s1 + i) - *(s2 + i));
 }
+
