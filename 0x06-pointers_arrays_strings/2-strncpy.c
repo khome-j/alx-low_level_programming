@@ -21,14 +21,10 @@ char *_strncpy(char *dest, char *src, int n)
 		len++;
 	}
 
-/*
- *while (len < n)
- *	{
- *		*(dest + len) = '\0';
- *		len++;
- *	}
- */
-
-	*(dest + len) = '\0';
+	while (len < n)
+	{
+		*(dest + len) = '\0';
+		len++;
+	}
 	return (dest);
 }
