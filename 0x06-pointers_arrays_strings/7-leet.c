@@ -13,7 +13,7 @@ char *leet(char *s)
 
 	char lc[] = {'a', 'e', 'o', 't', 'l'};
 	char uc[] = {'A', 'E', 'O', 'T', 'L'};
-	char encode[] = {'4','3', '0', '7', '1'};
+	char encode[] = {'4', '3', '0', '7', '1'};
 
 	count = 0;
 	while (*(s + count) != '\0')
