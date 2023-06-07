@@ -23,7 +23,7 @@ char *_strchr(char *s, char c)
 	}
 
 	if (*(s + count) == c)
-		return (tmp);
+		tmp= s + count;
 	return(tmp);
 }
 
