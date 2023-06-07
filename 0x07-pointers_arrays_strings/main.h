@@ -9,5 +9,6 @@ char *_memset(char *, char, unsigned int);
 char *_memcpy(char *, char *, unsigned int);
 char *_strchr(char *, char c);
 unsigned int _strspn(char *, char *);
+char *_strpbrk(char *, char *);
 
 #endif /* MAIN_H */
