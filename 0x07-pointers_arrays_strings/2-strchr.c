@@ -12,18 +12,18 @@ char *_strchr(char *s, char c)
 {
 	int count;
 	char *tmp = NULL;
-	
+
 	for (count = 0; *(s + count) != '\0'; count++)
 	{
 		if (*(s + count) == c)
 		{
 			tmp = s + count;
-			break;	
+			break;
 		}
 	}
 
 	if (*(s + count) == c)
-		tmp= s + count;
-	return(tmp);
+		tmp = s + count;
+	return (tmp);
 }
 
