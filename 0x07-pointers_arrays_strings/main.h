@@ -5,8 +5,8 @@
 #include <unistd.h>
 
 
-char *_memset(char *, char b, unsigned int n);
-
+char *_memset(char *, char b, unsigned int);
+char *_memcpy(char *, char *, unsigned int);
 
 
 #endif /* MAIN_H */
