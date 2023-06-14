@@ -2,6 +2,6 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("%c\n", argv[2]);
+	printf("%c\n", argv[0]);
 	return (0);
 }
