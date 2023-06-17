@@ -4,11 +4,13 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#include <stdio.h>
+
 
 char *create_array(unsigned int, char);
 char *_strdup(char *);
-char *str_concat(char *s1, char *s2);
-
+char *str_concat(char *, char *);
+int **alloc_grid(int, int);
 
 
 
