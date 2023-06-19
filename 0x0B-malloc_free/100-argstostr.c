@@ -8,42 +8,50 @@
  * Return: a pointer to a new string, or NULL if it fails
  */
 
+/**
+ * argstostr - a function that concatenates
+ *             all the arguments
+ *
+ * @ac: argument counter
+ * @av: argument holder
+ *
+ * Return: a pointer to a new string
+ *         or NULL if it fails
+*/
+
 char *argstostr(int ac, char **av)
 {
-	int size, i, j, count;
-	char *ptr;
+	int i, j, k, length;
+	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	i = 0;
-	while (i < ac)
+
+	/*find length of vector + '\0' which makes it a 2d array*/
+	length = 0;
+	for (i = 0; i < ac; i++)
 	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			size++;
-			j++;
-		}
-		size++;
+		for (j = 0; av[i][j] != '\0'; j++)
+			length++;
+		length++;
 	}
 
-	ptr = malloc(sizeof(char) * (size + 1));
-
-	if (ptr == NULL)
+	str = malloc((length + 1) * sizeof(char));
+	if (str == NULL)
 		return (NULL);
 
-	count = 0;
+	k = 0;
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			ptr[count] = av[i][j];
-			count++;
+			str[k] = av[i][j];
+			k++;
 		}
-		ptr[count] = '\n';
-		count++;
+		str[k] = '\n';
+		k++;
 	}
-	ptr[count] = '\0';
+	str[k] = '\0';
 
-	return (ptr);
+	return (str);
 }
