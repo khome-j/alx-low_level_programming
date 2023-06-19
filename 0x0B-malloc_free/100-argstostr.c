@@ -8,16 +8,6 @@
  * Return: a pointer to a new string, or NULL if it fails
  */
 
-/**
- * argstostr - a function that concatenates
- *             all the arguments
- *
- * @ac: argument counter
- * @av: argument holder
- *
- * Return: a pointer to a new string
- *         or NULL if it fails
-*/
 
 char *argstostr(int ac, char **av)
 {
