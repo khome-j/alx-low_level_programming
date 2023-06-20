@@ -12,9 +12,10 @@ void *malloc_checked(unsigned int b)
 	void *ptr;
 
 	if (b <= 0)
-		exit(98);
+		return (NULL);
 
 	ptr = malloc(sizeof(void *) * b);
+	/*void pointer(void *) promotes to any data type */
 	if (ptr == NULL)
 		exit(98);
 	return (ptr);
