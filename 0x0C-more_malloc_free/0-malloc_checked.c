@@ -14,7 +14,7 @@ void *malloc_checked(unsigned int b)
 	if (b <= 0)
 		return (NULL);
 
-	ptr = malloc(sizeof(void *) * b);
+	ptr = malloc(b);
 	/*void pointer(void *) promotes to any data type */
 	if (ptr == NULL)
 		exit(98);
