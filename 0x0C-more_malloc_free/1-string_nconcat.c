@@ -1,6 +1,4 @@
 #include "main.h"
-
-
 /**
  * string_nconcat - a function that concatenates two strings.
  * @s1: a string
@@ -10,7 +8,6 @@
  * Return: a pointer to a newly allocated space which contains s1,
  * followed by the first n bytes of s2. or returns NULL if allocation fails.
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
@@ -20,7 +17,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (s1 == NULL)
 		s1 = "";
-
 	for (i = 0; *(s1 + i) != '\0'; i++)
 		strlen1++;
 	for (i = 0; *(s2 + i) != '\0'; i++)
@@ -29,10 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = strlen2;
 	ptr = malloc(sizeof(*ptr) * (strlen1 + n + 1));
 	if (ptr == NULL)
-	{
-		free(NULL);
 		return (NULL);
-	}
 	for (i = 0; *(s1 + i) != 0; i++)
 		ptr[i] = s1[i];
 	if (n >= strlen2 && j < strlen2)
