@@ -24,7 +24,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		free(ptr);
 		exit(1);
-
+	}
 
 	ptr = d;
 	(*ptr).age = age;
@@ -32,7 +32,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	ptr1 = malloc(sizeof(char *) * strlen1);
 	if (ptr1 == NULL)
 	{
-		free(ptr1)
+		free(ptr1);
 		exit(1);
 	}
 
@@ -60,6 +60,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	ptr2[count] = '\0';
 	(*ptr).owner = ptr2;
+
 }
 
 
