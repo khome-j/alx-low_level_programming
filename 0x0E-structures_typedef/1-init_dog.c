@@ -23,6 +23,9 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	if (ptr == NULL)
 		exit(1);
 
+	if (d == NULL)
+		exit(1);
+
 	ptr = d;
 	(*ptr).age = age;
 
