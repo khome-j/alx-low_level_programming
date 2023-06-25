@@ -14,7 +14,6 @@ int str_len(char *s);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *ptr, *ptr1; /* store a copy of name and owner */
 	int i, len, len1;
 	dog_t *dog;
 
@@ -26,28 +25,26 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	(*dog).age = age;
-	ptr = malloc(sizeof(char) * len);
-	if ((ptr) == NULL)
+	(*dog).name = malloc(sizeof(char) * len);
+	if ((*dog).name == NULL)
 		return (NULL);
 	i = 0;
 	while (*(name + i) != '\0')
 	{
-		ptr[i] = name[i];
+		(*dog).name[i] = name[i];
 		i++;
 	}
-	(*dog).name = ptr;
 
-	ptr1 = malloc(sizeof(char) * len1);
-	if (ptr1 == NULL)
+	(*dog).owner = malloc(sizeof(char) * len1);
+	if ((*dog).owner == NULL)
 		return (NULL);
 
 	i = 0;
 	while (*(owner + i) != '\0')
 	{
-		ptr1[i] = owner[i];
+		(*dog).owner[i] = owner[i];
 		i++;
 	}
-	(*dog).owner = ptr1;
 	return (dog);
 }
 
