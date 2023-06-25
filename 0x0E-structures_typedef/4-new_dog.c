@@ -25,12 +25,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dog = malloc(sizeof(*dog));
 	if (dog == NULL)
+	{
+		free(dog);
 		return (NULL);
+	}
 
 	(*dog).age = age;
+
 	(*dog).name = malloc(sizeof(char) * len);
 	if ((*dog).name == NULL)
+	{
+		free((*dog).name);
 		return (NULL);
+	}
+
 	i = 0;
 	while (*(name + i) != '\0')
 	{
@@ -41,7 +49,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	(*dog).owner = malloc(sizeof(char) * len1);
 	if ((*dog).owner == NULL)
+	{
+		free((*dog).owner);
 		return (NULL);
+	}
 
 	i = 0;
 	while (*(owner + i) != '\0')
