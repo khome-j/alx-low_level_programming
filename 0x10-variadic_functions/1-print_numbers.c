@@ -12,7 +12,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 
-	if (separator != NULL && n != 0)
+	if (separator != NULL && (strlen(separator) > 1 && n != 0))
 	{
 		va_list arg;
 
