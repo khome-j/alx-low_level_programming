@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, res = 0;
+	int i, j, res = 0;
 	char n;
 
 	if (argc < 2)
@@ -25,11 +25,16 @@ int main(int argc, char *argv[])
 	i = 1;
 	while (i < argc)
 	{
-		n = *argv[i];
-		if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
+		j = 1;
+		while (argv[i][j])
 		{
-			printf("Error\n");
-			return (1);
+			n = argv[i][j];
+			if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
 		res += atoi(argv[i]);
 		i++;
