@@ -1,6 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
-
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * struct dog - a structure data type for a dog
@@ -15,5 +16,6 @@ struct dog
 	char *owner;
 };
 
+void init_dog(struct dog *, char *, float, char *);
 
 #endif /*DOG_H*/
