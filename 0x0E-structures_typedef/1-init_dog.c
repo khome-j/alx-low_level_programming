@@ -11,17 +11,11 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct dog *new;
-
-	new = malloc(sizeof(*new));
-	if (new == NULL)
+	if (d != (void *)0)
 	{
-		free(new);
-		return;
+		new = d;
+		(*new).name = name;
+		(*new).age = age;
+		(*new).owner = owner;
 	}
-	new = d;
-	(*new).name = name;
-	(*new).age = age;
-	(*new).owner = owner;
-
 }
