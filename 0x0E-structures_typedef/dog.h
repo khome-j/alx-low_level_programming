@@ -5,12 +5,13 @@
 /**
  * struct dog - a structure data type for a dog
  * @name: name of dog which is a string
- * @age: age of the dog in integer
+ * @age: age of the dog is a float
  * @owner: owner of the dog in string
  */
-struct dog{
+struct dog
+{
 	char *name;
-	int age;
+	float age;
 	char *owner;
 };
 
