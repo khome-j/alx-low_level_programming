@@ -1,5 +1,5 @@
 #include "3-calc.h"
-
+#include <stdlib.h>
 /**
  * main - Entry point
  * @ac: argument count
@@ -15,7 +15,7 @@ int main(int ac, char *av[])
 
 	num1 = atoi(av[1]);
 	num2 = atoi(av[3]);
-	operator = argv[2];
+	operator = av[2];
 
 	if (ac != 4)
 	{
@@ -23,10 +23,19 @@ int main(int ac, char *av[])
 		exit(98);
 	}
 
-	if (operator == NULL)
+
+
+	if (get_op_func(operator) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if (operator == "/"
+	if ((*operator == 37 || *operator == 47) && num2 == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", get_op_func(operator)(num1, num2));
+	return (0);
+}
