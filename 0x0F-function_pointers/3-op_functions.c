@@ -1,12 +1,11 @@
 #include "3-calc.h"
 
-
 /**
- * op_add - a function that adds two integers
+ * op_add - add two numbers
  * @a: integer
  * @b: integer
  *
- * Return: the sum of a and b.
+ * Return: the sum of two numbers
  */
 int op_add(int a, int b)
 {
@@ -14,11 +13,11 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - a function that subtract two integers
- * @a: the integer
- * @b: the integer
+ * op_sub - subtract two num
+ * @a: integer
+ * @b: integer
  *
- * Return: the difference of a and b
+ * Return: the difference of two number
  */
 int op_sub(int a, int b)
 {
@@ -26,38 +25,35 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - a function that multiplies two integers
+ * op_mul - multiplies two numb
  * @a: integer
  * @b: integer
  *
- * Return: the product of a and b.
+ * Return: the product of a and b
  */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
 
-
 /**
- * op_div - a function that divides two numbers
+ * op_div - divides two nm
  * @a: integer
  * @b: integer
  *
- * Return: the division between a and b
+ * Return: the result of the division of two num
  */
 int op_div(int a, int b)
 {
 	return (a / b);
 }
 
-
 /**
- * op_mod - a function that returns the remainder of the division
- * of two integers
- * @a: the integer
- * @b: the integer
+ * op_mod - the remainder of the div of 2 num
+ * @a: integer
+ * @b: integer
  *
- * Return: the remainder of the division of a and b.
+ * Return: the remainder of the division of 2 num
  */
 int op_mod(int a, int b)
 {

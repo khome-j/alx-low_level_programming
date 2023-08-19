@@ -1,17 +1,17 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - a function that selects the correct function to perform the
- * operation asked by the user
+ * get_op_func - a function that selects the correct function to
+ * perform the operation asked by the user
  *
- * @s: the operator passed as argument to the program
+ * @s: the string to be checked
  *
  * Return: the result of the operation
  */
 
 int (*get_op_func(char *s))(int, int)
 {
-	opt_t ops[] = {
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -20,9 +20,8 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int i;
+	int i = 0;
 
-	i = 0;
 	while (i < 5)
 	{
 		if (*s == *ops[i].op)
