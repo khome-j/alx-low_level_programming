@@ -52,7 +52,8 @@ int op_div(int a, int b)
 
 
 /**
- * op_mod - a function that returns the remainder of the division of two integers
+ * op_mod - a function that returns the remainder of the division
+ * of two integers
  * @a: the integer
  * @b: the integer
  *
