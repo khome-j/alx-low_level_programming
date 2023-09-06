@@ -32,12 +32,13 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content)
+	{
 		buf_count = _strlen(text_content);
 
-	write_file = write(fd, text_content, buf_count);
-	if (write_file == -1)
-		return (-1);
-
+		write_file = write(fd, text_content, buf_count);
+		if (write_file == -1)
+			return (-1);
+	}
 	close(fd);
 
 	return (1);
