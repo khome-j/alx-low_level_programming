@@ -24,37 +24,21 @@ int _strlen(char *s)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, write_file;
-	char *buf;
+	int fd, write_file, buf_count;
 
-	buf = malloc(sizeof(char) * _strlen(text_content));
-	if (filename == NULL || buf == NULL)
-	{
-		free(buf);
-		return (-1);
-	}
 
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 
-	i = 0;
+	if (text_content)
+		buf_count = _strlen(text_content);
 
-	if (text_content != NULL)
-	{
-		while (text_content[i])
-		{
-			buf[i] = text_content[i];
-			i++;
-		}
+	write_file = write(fd, text_content, buf_count);
+	if (write_file == -1)
+		return (-1);
 
-		write_file = write(fd, buf, _strlen(text_content));
-		if (write_file == -1)
-			return (-1);
-	}
 	close(fd);
-
-	free(buf);
 
 	return (1);
 }
