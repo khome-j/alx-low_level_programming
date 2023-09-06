@@ -2,7 +2,7 @@
 
 /**
  * _strlen - a function the returns the length of a string
- * @c: string
+ * @s: string
  *
  * Return: the length of a string on success
  */
@@ -39,15 +39,19 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	i = 0;
-	while (text_content[i])
-	{
-		buf[i] = text_content[i];
-		i++;
-	}
 
-	write_file = write(fd, buf, _strlen(text_content));
-	if (write_file == -1)
-		return (-1);
+	if (text_content)
+	{
+		while (text_content[i])
+		{
+			buf[i] = text_content[i];
+			i++;
+		}
+
+		write_file = write(fd, buf, _strlen(text_content));
+		if (write_file == -1)
+			return (-1);
+	}
 	close(fd);
 
 	free(buf);
