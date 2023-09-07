@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 #define BUF 1023
 
 
@@ -14,7 +15,7 @@ char *read_filefrom(const char *file_from)
 	ssize_t fd, read_file, close_file;
 	char *buffer;
 
-	buffer = malloc(BUF);
+	buffer = malloc(sizeof(char) * INT_MAX);
 	if (buffer == NULL)
 		exit(EXIT_FAILURE);
 
@@ -50,6 +51,9 @@ char *read_filefrom(const char *file_from)
 void cp(char *buffer, char *file_to)
 {
 	ssize_t fd, write_file, close_file;
+
+	if (file_to == NULL)
+		exit(EXIT_FAILURE);
 
 	fd = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd == -1)
