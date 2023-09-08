@@ -24,7 +24,7 @@ void exit_code(int code, ssize_t fd, char *str)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
 			exit(99);
 		case 100:
-			dprintf(STDERR_FILENO, "Can't close fd %li\n", fd);
+			dprintf(STDERR_FILENO, "Can't close fd %zd\n", fd);
 			exit(100);
 	}
 }
