@@ -10,7 +10,7 @@
  *
  * Return: nothing
  */
-void exit_code(int code, int fd, char *str)
+void exit_code(int code, ssize_t fd, char *str)
 {
 	switch (code)
 	{
@@ -24,7 +24,7 @@ void exit_code(int code, int fd, char *str)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
 			exit(code);
 		case 100:
-			dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", fd);
 			exit(code);
 	}
 }
@@ -37,8 +37,7 @@ void exit_code(int code, int fd, char *str)
  */
 void cp(char *file_from, char *file_to)
 {
-	int fd, fd1, rfile_from, wfile_to;
-	int close_fd, close_fd1;
+	ssize_t fd, fd1, rfile_from, wfile_to, close_fd, close_fd1;
 	char *buffer;
 
 	buffer = malloc(sizeof(char) * BUF);
@@ -49,10 +48,10 @@ void cp(char *file_from, char *file_to)
 	}
 	fd = open(file_from, O_RDONLY);
 	if (fd == -1)
-		exit_code(98, fd, file_from);
+		exit_code(98, 0, file_from);
 	fd1 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd1 == -1)
-		exit_code(99, fd, file_to);
+		exit_code(99, 0, file_to);
 
 	while ((rfile_from = read(fd, buffer, BUF)) != 0)
 	{
