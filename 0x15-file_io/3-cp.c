@@ -19,13 +19,13 @@ void exit_code(int code, ssize_t fd, char *str)
 			exit(code);
 		case 98:
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", str);
-			exit(98);
+			exit(code);
 		case 99:
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
-			exit(99);
+			exit(code);
 		case 100:
 			dprintf(STDERR_FILENO, "Can't close fd %ld\n", fd);
-			exit(100);
+			exit(code);
 	}
 }
 
@@ -81,11 +81,7 @@ void cp(char *file_from, char *file_to)
 int main(int ac, char **av)
 {
 	if (ac != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-
+		exit_code(97, 0, NULL);
 	cp(av[1], av[2]);
 
 	return (0);
