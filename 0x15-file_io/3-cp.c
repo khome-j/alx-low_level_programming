@@ -24,7 +24,7 @@ void exit_code(int code, ssize_t fd, char *str)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
 			exit(code);
 		case 100:
-			dprintf(STDERR_FILENO, "Can't close fd %ld\n", fd);
+			dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
 			exit(code);
 	}
 }
@@ -37,7 +37,8 @@ void exit_code(int code, ssize_t fd, char *str)
  */
 void cp(char *file_from, char *file_to)
 {
-	ssize_t fd, fd1, rfile_from, wfile_to, close_fd, close_fd1;
+	ssize_t fd, fd1, rfile_from, wfile_to;
+	int close_fd, close_fd1;
 	char *buffer;
 
 	buffer = malloc(sizeof(char) * BUF);
