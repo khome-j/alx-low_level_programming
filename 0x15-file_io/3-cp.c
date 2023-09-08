@@ -10,7 +10,7 @@
  *
  * Return: nothing
  */
-void exit_code(int code, ssize_t fd, char *str)
+void exit_code(int code, int fd, char *str)
 {
 	switch (code)
 	{
@@ -37,7 +37,7 @@ void exit_code(int code, ssize_t fd, char *str)
  */
 void cp(char *file_from, char *file_to)
 {
-	ssize_t fd, fd1, rfile_from, wfile_to;
+	int fd, fd1, rfile_from, wfile_to;
 	int close_fd, close_fd1;
 	char *buffer;
 
